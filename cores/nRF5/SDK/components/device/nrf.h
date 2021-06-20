@@ -89,15 +89,14 @@ POSSIBILITY OF SUCH DAMAGE.
     #endif
 #endif
 
-/* Redefine "old" too-generic name NRF52 to NRF52832_XXAA to keep backwards compatibility. */
-#if defined (NRF52)
-    #ifndef NRF52832_XXAA
-        #define NRF52832_XXAA
-    #endif
-#endif
-
 /* Define NRF52_SERIES for common use in nRF52 series devices. Only if not previously defined. */
 #if defined (NRF52805_XXAA) || defined (NRF52810_XXAA) || defined (NRF52811_XXAA) || defined (NRF52820_XXAA) || defined (NRF52832_XXAA) || defined (NRF52832_XXAB) || defined (NRF52833_XXAA) || defined (NRF52840_XXAA)
+    #ifndef NRF52_SERIES
+        #define NRF52_SERIES
+    #endif
+#elif defined (NRF52)
+    /* Redefine "old" too-generic name NRF52 to NRF52832_XXAA to keep backwards compatibility. */
+    #define NRF52832_XXAA
     #ifndef NRF52_SERIES
         #define NRF52_SERIES
     #endif
