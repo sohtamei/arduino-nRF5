@@ -204,7 +204,7 @@ This Arduino Core does **not** contain any Arduino style API's for BLE functiona
 
 ### Recommend BLE Libraries
 
- * [BLEPeripheral](https://github.com/sandeepmistry/arduino-BLEPeripheral)
+ * [BLEPeripheral](https://github.com/sohtamei/arduino-BLEPeripheral)
    * v0.3.0 and greater, available via the Arduino IDE's library manager.
    * Supports peripheral mode only.
 
